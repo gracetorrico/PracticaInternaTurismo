@@ -69,6 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:backgroundTint="#9C27B0"
+        android:onClick="Login"
         android:text="Iniciar sesión"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
