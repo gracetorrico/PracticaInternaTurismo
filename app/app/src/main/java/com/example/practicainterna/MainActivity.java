@@ -23,9 +23,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tvTitulo, tvLogin;
-    EditText etCorreo, etContrasena;
-    Button bnInicio, bnRegistro;
+    private TextView tvTitulo, tvLogin;
+    private EditText etCorreo, etContrasena;
+    private Button bnInicio, bnRegistro;
 
     RequestQueue requestQueue;
     @Override
@@ -77,17 +77,25 @@ public class MainActivity extends AppCompatActivity {
                             String status = response.getString("status");
                             if(status.equals("success"))
                             {
+                                JSONObject userData;
+                                Integer idUsuario = 0;
+                                String nombre, apellido, correo, contrasena, numero;
+
                                 Toast.makeText(getApplicationContext(),"Inicio de sesión correcto",Toast.LENGTH_SHORT).show();
-                                //JSONArray dataArray = response.getJSONArray("data");
-                                //for (int i = 0; i < dataArray.length(); i++) {
-                                //    JSONObject userData = dataArray.getJSONObject(i);
-                                //    String idUsuario = userData.getString("IDUsuario");
-                                //    String nombre = userData.getString("Nombre");
-                                //    String apellido = userData.getString("Apellido");
-                                //    String correo = userData.getString("Correo");
-                                //    String contrasena = userData.getString("Contrasena");
-                                //   String numero = userData.getString("Numero");
-                                //}
+                                JSONArray dataArray = response.getJSONArray("data");
+                                for (int i = 0; i < dataArray.length(); i++) {
+                                    userData = dataArray.getJSONObject(i);
+                                    idUsuario = userData.getInt("IDUsuario");
+                                    nombre = userData.getString("Nombre");
+                                    apellido = userData.getString("Apellido");
+                                    correo = userData.getString("Correo");
+                                    contrasena = userData.getString("Contrasena");
+                                    numero = userData.getString("Numero");
+                                }
+
+                                Intent i = new Intent(getApplicationContext(), MapaCategoria.class);
+                                i.putExtra("enteroKey", idUsuario);
+                                startActivity(i);
                             }
                             else{
                                 Toast.makeText(getApplicationContext(),"El usuario y contraseña ingresados no corresponden a ningún usuario",Toast.LENGTH_LONG).show();

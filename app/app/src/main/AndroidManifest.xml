@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PracticaInterna"
         tools:targetApi="31">
         <activity
+            android:name=".MapaCategoria"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="true">
             <intent-filter>
@@ -30,6 +33,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/my_map_api_key" />
+
     </application>
 
 </manifest>
