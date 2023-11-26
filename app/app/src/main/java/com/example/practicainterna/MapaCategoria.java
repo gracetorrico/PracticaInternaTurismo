@@ -28,6 +28,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONArray;
@@ -42,7 +43,7 @@ public class MapaCategoria extends AppCompatActivity implements OnMapReadyCallba
     ArrayList<Coordenadas> establecimientos;
     ArrayList<Coordenadas> sitiosHistoricos;
     ArrayList<Coordenadas> sucursales;
-    private TextView tvTituloMapa;
+    private TextView tvTituloMapa, tvMapa;
     private Spinner spCategorias;
     private GoogleMap myMap;
 
@@ -58,6 +59,7 @@ public class MapaCategoria extends AppCompatActivity implements OnMapReadyCallba
         sitiosHistoricos = new ArrayList<>();
         sucursales = new ArrayList<>();
         tvTituloMapa = (TextView) findViewById(R.id.tvTituloMapa);
+        tvMapa = (TextView) findViewById(R.id.tvMapa);
         spCategorias = (Spinner) findViewById(R.id.spCategorias);
 
         ArrayList<String> categorias = new ArrayList<>();
@@ -189,9 +191,5 @@ public class MapaCategoria extends AppCompatActivity implements OnMapReadyCallba
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         myMap = googleMap;
-
-        //LatLng sydney = new LatLng(-34,151);
-        //myMap.addMarker(new MarkerOptions().position(sydney).title("Sydney"));
-        //myMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
