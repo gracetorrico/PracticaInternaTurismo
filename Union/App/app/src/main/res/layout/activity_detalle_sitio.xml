@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetalleSitio">
+
+        <ImageView
+            android:id="@+id/ivVolverDS"
+            android:layout_width="72dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="4dp"
+            android:onClick="Volver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/flecha" />
+
+        <ImageView
+            android:id="@+id/ivLugar"
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTNombreInsignia"
+            app:srcCompat="@drawable/lugar" />
+
+        <TextView
+            android:id="@+id/tvTituloDetalleLugar"
+            android:layout_width="263dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="casual"
+            android:text="Detalle del lugar"
+            android:textAlignment="center"
+            android:textColor="#9C27B0"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTIDLugar"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="ID Lugar:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloDetalleLugar" />
+
+        <TextView
+            android:id="@+id/tvTIDInsignia"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="ID Insignia:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescripcion" />
+
+        <TextView
+            android:id="@+id/tvTNombreInsignia"
+            android:layout_width="113dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Nombre de insignia:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTIDInsignia" />
+
+        <TextView
+            android:id="@+id/tvTDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Descripción:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTIngreso" />
+
+        <TextView
+            android:id="@+id/tvTCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Categoría:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTipoComida" />
+
+        <TextView
+            android:id="@+id/tvTIngreso"
+            android:layout_width="148dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Ingreso libre:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTCategoria" />
+
+        <TextView
+            android:id="@+id/tvTTipoComida"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Tipo de Comida:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+        <TextView
+            android:id="@+id/tvTIDSucursal"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="ID Sucursal:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTIDLugar" />
+
+        <TextView
+            android:id="@+id/tvTNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Nombre:"
+            android:textAlignment="textStart"
+            android:textColor="#9C27B0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTIDSucursal" />
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTDescripcion" />
+
+        <TextView
+            android:id="@+id/tvIDLugar"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="33dp"
+            android:textSize="22sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTIDLugar"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloDetalleLugar" />
+
+        <TextView
+            android:id="@+id/tvIngreso"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tvTIngreso"
+            app:layout_constraintTop_toBottomOf="@+id/tvTCategoria" />
+
+        <TextView
+            android:id="@+id/tvNombreInsignia"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:textSize="22sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTNombreInsignia"
+            app:layout_constraintTop_toBottomOf="@+id/tvTIDInsignia" />
+
+        <TextView
+            android:id="@+id/tvIDInsignia"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:textSize="22sp"
+            app:layout_constraintStart_toEndOf="@+id/tvTIDInsignia"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescripcion" />
+
+        <TextView
+            android:id="@+id/tvCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tvTCategoria"
+            app:layout_constraintTop_toBottomOf="@+id/tvTipoComida" />
+
+        <TextView
+            android:id="@+id/tvTipoComida"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTTipoComida" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTNombre" />
+
+        <TextView
+            android:id="@+id/tvIDSucursal"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:textSize="22sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/tvTIDSucursal"
+            app:layout_constraintTop_toBottomOf="@+id/tvTIDLugar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

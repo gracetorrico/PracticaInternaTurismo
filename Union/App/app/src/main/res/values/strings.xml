@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExplorAR</string>
+
+    <string name="my_map_api_key">AIzaSyDgpOH5dAt1Jp7UBkJV2cwSPsqmHiX08Uo</string>
+</resources>

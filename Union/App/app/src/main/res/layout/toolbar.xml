@@ -1,0 +1,30 @@
+<LinearLayout
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lavander"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+
+    <ImageButton
+        android:id="@+id/menubutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onMenuClick"
+        android:src="@drawable/baseline_add_home_24" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:text="ExplorAR"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>
