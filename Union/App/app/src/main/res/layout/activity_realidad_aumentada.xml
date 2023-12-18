@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MapaCategoria">
+
+        <Button
+            android:id="@+id/btEscanear"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:backgroundTint="#9C27B0"
+            android:fontFamily="sans-serif-smallcaps"
+            android:onClick="Escanear"
+            android:text="Escanear"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvIDInsigniaRA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="28sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloRA" />
+
+        <ImageView
+            android:id="@+id/ivVolverRA"
+            android:layout_width="72dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="4dp"
+            android:onClick="VolverRA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.008"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/flecha" />
+
+        <TextView
+            android:id="@+id/tvTituloRA"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:fontFamily="casual"
+            android:text="Escanea para obtener tu insignia"
+            android:textAlignment="center"
+            android:textColor="#9C27B0"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNombreRA"
+            android:layout_width="332dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIDInsigniaRA" />
+
+        <TextView
+            android:id="@+id/tvDescripcionRA"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:layout_marginBottom="56dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btEscanear" />
+
+        <ImageView
+            android:id="@+id/ivInsignia"
+            android:layout_width="249dp"
+            android:layout_height="219dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/tvDescripcionRA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreRA"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
