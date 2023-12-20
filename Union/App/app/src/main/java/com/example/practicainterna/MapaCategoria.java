@@ -269,6 +269,12 @@ public class MapaCategoria extends AppCompatActivity implements OnMapReadyCallba
     public void onMapReady(@NonNull GoogleMap googleMap) {
         myMap = googleMap;
 
+        // Habilitar gestos de zoom
+        myMap.getUiSettings().setZoomGesturesEnabled(true);
+
+        // Habilitar controles de zoom en la interfaz del mapa
+        myMap.getUiSettings().setZoomControlsEnabled(true);
+
         myMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
